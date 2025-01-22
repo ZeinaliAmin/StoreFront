@@ -3,10 +3,17 @@
 # WESTERN GOVERNORS UNIVERSITY 
 ## D287 – JAVA FRAMEWORKS
 C.  Customize the HTML user interface for your customer’s application. The user interface should include the shop name, the product names, and the names of the parts.
+File: mainscreen.html
+Lines: 104-126
+Added a navigation bar to webpage. Added drop down menu for the product and parts of the store.
 
 Note: Do not remove any elements that were included in the screen. You may add any additional elements you would like or any images, colors, and styles, although it is not required.
 
 D.  Add an “About” page to the application to describe your chosen customer’s company to web viewers and include navigation to and from the “About” page and the main screen.
+File: about.html
+Lines: 115 - 150
+Added About Us on homepage which links to aboutus.html. General about us paragaph with ability to go back to homepage via clicking on title.
+
 
 E.  Add a sample inventory appropriate for your chosen store to the application. You should have five parts and five products in your sample inventory and should not overwrite existing data in the database.
 
