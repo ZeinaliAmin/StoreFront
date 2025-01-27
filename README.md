@@ -11,8 +11,17 @@ Note: Do not remove any elements that were included in the screen. You may add a
 
 D.  Add an “About” page to the application to describe your chosen customer’s company to web viewers and include navigation to and from the “About” page and the main screen.
 File: about.html
-Lines: 115 - 150
-Added About Us on homepage which links to aboutus.html. General about us paragaph with ability to go back to homepage via clicking on title.
+Lines: 140 - 152
+Created about.html page for general description on customers store
+
+File: aboutController.java
+Lines: 12-17
+Created controller to navigate to the About Us page.
+
+File: mainscreen.html
+Lines: 206-208
+Added About Us section in footer with link to aboutController
+
 
 
 E.  Add a sample inventory appropriate for your chosen store to the application. You should have five parts and five products in your sample inventory and should not overwrite existing data in the database.
