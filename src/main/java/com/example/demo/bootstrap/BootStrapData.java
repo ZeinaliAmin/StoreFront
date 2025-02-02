@@ -97,30 +97,35 @@ public class BootStrapData implements CommandLineRunner {
 
             InhousePart blanks = new InhousePart();
             blanks.setName("Blanks");
+            blanks.setId(1);
             blanks.setPrice(50);
             blanks.setInv(20);
             inhousePartRepository.save(blanks);
 
             OutsourcedPart guides = new OutsourcedPart();
             guides.setName("Guides");
+            guides.setId(2);
             guides.setPrice(5);
             guides.setInv(100);
             outsourcedPartRepository.save(guides);
 
             InhousePart reelSeats = new InhousePart();
             reelSeats.setName("Reel Seats");
+            reelSeats.setId(3);
             reelSeats.setPrice(15);
             reelSeats.setInv(5);
             inhousePartRepository.save(reelSeats);
 
             OutsourcedPart cork = new OutsourcedPart();
             cork.setName("Cork");
+            cork.setId(4);
             cork.setPrice(10);
             cork.setInv(100);
             outsourcedPartRepository.save(cork);
 
             OutsourcedPart thread = new OutsourcedPart();
             thread.setName("Thread");
+            thread.setId(5);
             thread.setPrice(5);
             thread.setInv(60);
             outsourcedPartRepository.save(thread);

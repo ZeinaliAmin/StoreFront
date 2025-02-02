@@ -173,4 +173,25 @@ public class AddProductController {
         theModel.addAttribute("availparts",availParts);
         return "productForm";
     }
+
+    @GetMapping("/buyProduct")
+    public String buyProduct(@Valid @RequestParam("productID") int theId,  Model theModel){
+
+        ProductService repo = context.getBean(ProductServiceImpl.class);
+        Product product = repo.findById(theId);
+
+        int inventory = product.getInv();
+
+        // Link to PurchaseFailure HTML if inventory is zero
+        if(inventory == 0){
+            return "PurchaseFailure";
+        } else{
+            // Link to PurchaseSuccess if product is in stock
+            inventory = inventory - 1;
+            product.setInv(inventory);
+            repo.save(product);
+            return "PurchaseSuccess";
+        }
+
+    }
 }
