@@ -55,6 +55,17 @@ G.  Modify the parts to track maximum and minimum inventory by doing the followi
 •  Rename the file the persistent storage is saved to.
 •  Modify the code to enforce that the inventory is between or at the minimum and maximum value.
 
+File: Part.java
+Lines: 33 - 36
+Added Min and max fields to Part class
+
+File: InventoryValidator.java ValidInventory.java
+Created validator class and interface for ensuring part inventory is between min and max values.
+
+File: InHousePartForm.html OutsourcedPartForm.html
+Lines: 33 - 39
+Added function that indicates if there is an error when updating inventory on html pages.
+
 H.  Add validation for between or at the maximum and minimum fields. The validation must include the following:
 •  Display error messages for low inventory when adding and updating parts if the inventory is less than the minimum number of parts.
 •  Display error messages for low inventory when adding and updating products lowers the part inventory below the minimum.

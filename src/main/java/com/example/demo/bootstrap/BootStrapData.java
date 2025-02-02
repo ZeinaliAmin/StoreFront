@@ -100,6 +100,8 @@ public class BootStrapData implements CommandLineRunner {
             blanks.setId(1);
             blanks.setPrice(50);
             blanks.setInv(20);
+            blanks.setMaxInventory(50);
+            blanks.setMinInventory(1);
             inhousePartRepository.save(blanks);
 
             OutsourcedPart guides = new OutsourcedPart();
@@ -107,6 +109,8 @@ public class BootStrapData implements CommandLineRunner {
             guides.setId(2);
             guides.setPrice(5);
             guides.setInv(100);
+            guides.setMaxInventory(125);
+            guides.setMinInventory(1);
             outsourcedPartRepository.save(guides);
 
             InhousePart reelSeats = new InhousePart();
@@ -114,6 +118,8 @@ public class BootStrapData implements CommandLineRunner {
             reelSeats.setId(3);
             reelSeats.setPrice(15);
             reelSeats.setInv(5);
+            reelSeats.setMaxInventory(50);
+            reelSeats.setMinInventory(1);
             inhousePartRepository.save(reelSeats);
 
             OutsourcedPart cork = new OutsourcedPart();
@@ -121,6 +127,8 @@ public class BootStrapData implements CommandLineRunner {
             cork.setId(4);
             cork.setPrice(10);
             cork.setInv(100);
+            cork.setMaxInventory(125);
+            cork.setMinInventory(1);
             outsourcedPartRepository.save(cork);
 
             OutsourcedPart thread = new OutsourcedPart();
@@ -128,6 +136,8 @@ public class BootStrapData implements CommandLineRunner {
             thread.setId(5);
             thread.setPrice(5);
             thread.setInv(60);
+            thread.setMaxInventory(100);
+            thread.setMinInventory(1);
             outsourcedPartRepository.save(thread);
 
         }
