@@ -12,7 +12,7 @@ Note: Do not remove any elements that were included in the screen. You may add a
 D.  Add an “About” page to the application to describe your chosen customer’s company to web viewers and include navigation to and from the “About” page and the main screen.
 File: about.html
 Lines: 140 - 152
-Created about.html page for general description on customers store
+Created about.html page for general description on customers store (Click on Title to go back to homepage)
 
 File: aboutController.java
 Lines: 12-17
@@ -77,7 +77,7 @@ Added function that indicates if there is an error when updating inventory on ht
 
 Files: EnufPartsValidator.java
 Lines: 37
-Added If statement to ensure error message is displayed when adding/updating products lowers part inventory below minimum
+Added conditionals to ensure error message is displayed when adding/updating products lowers part inventory below minimum value
 
 I.  Add at least two unit tests for the maximum and minimum fields to the PartTest class in the test package.
 File: PartTest.java
