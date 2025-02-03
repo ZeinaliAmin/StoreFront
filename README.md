@@ -85,6 +85,8 @@ Lines: 160 - 176
 Added two unit tests for min/max values
 
 J.  Remove the class files for any unused validators in order to clean your code.
+Files: DeletePartValidator
+Deleted unused validator class
 
 K.  Demonstrate professional communication in the content and presentation of your submission.
 
