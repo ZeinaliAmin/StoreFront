@@ -179,14 +179,11 @@ public class AddProductController {
 
         ProductService repo = context.getBean(ProductServiceImpl.class);
         Product product = repo.findById(theId);
-
         int inventory = product.getInv();
 
-        // Link to PurchaseFailure HTML if inventory is zero
         if(inventory == 0){
             return "PurchaseFailure";
         } else{
-            // Link to PurchaseSuccess if product is in stock
             inventory = inventory - 1;
             product.setInv(inventory);
             repo.save(product);

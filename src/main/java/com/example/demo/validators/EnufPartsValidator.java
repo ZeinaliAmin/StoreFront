@@ -39,8 +39,6 @@ public class EnufPartsValidator implements ConstraintValidator<ValidEnufParts, P
                 if((p.getInv() - p.getMinInventory()) < (product.getInv()-myProduct.getInv())){
                     return false;
                 }
-
-
             }
             return true;
         }

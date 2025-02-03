@@ -45,43 +45,17 @@ public class BootStrapData implements CommandLineRunner {
 
         if (productRepository.count() == 0) {
 
-       /*
-        OutsourcedPart o= new OutsourcedPart();
-        o.setCompanyName("Western Governors University");
-        o.setName("out test");
-        o.setInv(5);
-        o.setPrice(20.0);
-        o.setId(100L);
-        outsourcedPartRepository.save(o);
-        OutsourcedPart thePart=null;
-        List<OutsourcedPart> outsourcedParts=(List<OutsourcedPart>) outsourcedPartRepository.findAll();
-        for(OutsourcedPart part:outsourcedParts){
-            if(part.getName().equals("out test"))thePart=part;
-        }
-
-        System.out.println(thePart.getCompanyName());
-        */
             List<OutsourcedPart> outsourcedParts = (List<OutsourcedPart>) outsourcedPartRepository.findAll();
             for (OutsourcedPart part : outsourcedParts) {
                 System.out.println(part.getName() + " " + part.getCompanyName());
             }
 
-        /*
-        Product bicycle= new Product("bicycle",100.0,15);
-        Product unicycle= new Product("unicycle",100.0,15);
-        productRepository.save(bicycle);
-        productRepository.save(unicycle);
-        */
-
-
-            // Create 5 Products
             Product floatRod = new Product("Float Rod", 100.0, 15);
             Product DriftRod = new Product("Drift Rod", 110.0, 10);
             Product TwitchingRod = new Product("Twitching Rod", 90.0, 8);
             Product TrollingRod = new Product("Trolling Rod", 125.0, 20);
             Product CenterPin = new Product("Centerpin Rod", 200.0, 5);
 
-            // Save products to repository
             productRepository.save(floatRod);
             productRepository.save(DriftRod);
             productRepository.save(TwitchingRod);
@@ -141,7 +115,6 @@ public class BootStrapData implements CommandLineRunner {
             outsourcedPartRepository.save(thread);
 
         }
-
 
     }
 }
