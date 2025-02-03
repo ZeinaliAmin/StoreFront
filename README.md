@@ -80,6 +80,9 @@ Lines: 37
 Added If statement to ensure error message is displayed when adding/updating products lowers part inventory below minimum
 
 I.  Add at least two unit tests for the maximum and minimum fields to the PartTest class in the test package.
+File: PartTest.java
+Lines: 160 - 176
+Added two unit tests for min/max values
 
 J.  Remove the class files for any unused validators in order to clean your code.
 
