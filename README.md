@@ -1,92 +1,63 @@
-<strong>** DO NOT DISTRIBUTE OR PUBLICLY POST SOLUTIONS TO THESE LABS. MAKE ALL FORKS OF THIS REPOSITORY WITH SOLUTION CODE PRIVATE. PLEASE REFER TO THE STUDENT CODE OF CONDUCT AND ETHICAL EXPECTATIONS FOR COLLEGE OF INFORMATION TECHNOLOGY STUDENTS FOR SPECIFICS. ** </strong>
+Inventory Management System
 
-# WESTERN GOVERNORS UNIVERSITY 
-## D287 – JAVA FRAMEWORKS
-C.  Customize the HTML user interface for your customer’s application. The user interface should include the shop name, the product names, and the names of the parts.
-File: mainscreen.html
-Lines: 104-126
-Added a navigation bar to webpage. Added drop down menu for the product and parts of the store.
+This is a customized Inventory Management System built using a Spring application with a Java backend. The system is designed to help businesses, specifically those that sell products composed of various parts, manage their inventory more effectively.
 
-Note: Do not remove any elements that were included in the screen. You may add any additional elements you would like or any images, colors, and styles, although it is not required.
+Table of Contents
 
-D.  Add an “About” page to the application to describe your chosen customer’s company to web viewers and include navigation to and from the “About” page and the main screen.
-File: about.html
-Lines: 140 - 152
-Created about.html page for general description on customers store (Click on Title to go back to homepage)
+Description
+Installation
+Usage
+Features
+Contributing
+Description
 
-File: aboutController.java
-Lines: 12-17
-Created controller to navigate to the About Us page.
+This Inventory Management System is tailored to meet the needs of [insert customer type], a business that sells products composed of parts. For example, a car parts store where products like engines or brake pads are made up of individual parts such as pistons and brake shoes.
 
-File: mainscreen.html
-Lines: 206-208
-Added About Us section in footer with link to aboutController
+The application allows you to manage the following:
 
+Add and track products and their components (parts).
+Keep track of inventory levels for each part and product.
+Update stock levels when parts are used in the creation of new products.
+Technologies Used:
+Backend: Java with Spring Framework
+Frontend: HTML (Generic UI template)
+Database: [Your chosen database, e.g., MySQL, PostgreSQL, etc.]
+Tools: Spring Boot, Hibernate, Thymeleaf (optional, if using dynamic pages)
+Installation
 
+Follow the steps below to set up the project locally:
 
-E.  Add a sample inventory appropriate for your chosen store to the application. You should have five parts and five products in your sample inventory and should not overwrite existing data in the database.
+Clone the repository:
+git clone https://github.com/your-username/inventory-management-system.git
+Navigate to the project directory:
+cd inventory-management-system
+Install Dependencies: Ensure you have Maven installed, then run the following command:
+mvn clean install
+Configure the database:
+Make sure your database is set up (e.g., MySQL, PostgreSQL).
+Update the application.properties or application.yml file with your database connection details.
+Run the Application: Use the following command to run the Spring Boot application:
+mvn spring-boot:run
+Access the application: The application will be running locally on http://localhost:8080.
+Usage
 
-Note: Make sure the sample inventory is added only when both the part and product lists are empty. When adding the sample inventory appropriate for the store, the inventory is stored in a set so duplicate items cannot be added to your products. When duplicate items are added, make a “multi-pack” part.
+Once the application is running, you can perform the following tasks:
 
-File BootStrapData.java
-Lines: 46 - 126
-Created 5 parts and 5 products and saved to appropriate repositories 
+Add New Products:
+Enter the product name, description, and parts that make up the product.
+Track Inventory:
+The system will automatically update inventory levels as parts are used in the creation of new products.
+View Inventory Reports:
+Generate reports to view the current inventory levels for each part and product.
+Example Workflow:
+A product (e.g., Engine) is created and consists of parts like pistons, spark plugs, and a cylinder head.
+As the inventory manager adds the engine to the store’s inventory, the system will automatically subtract quantities of each part that make up the engine.
+Features
 
-F.  Add a “Buy Now” button to your product list. Your “Buy Now” button must meet each of the following parameters:
-•  The “Buy Now” button must be next to the buttons that update and delete products.
-•  The button should decrement the inventory of that product by one. It should not affect the inventory of any of the associated parts.
-•  Display a message that indicates the success or failure of a purchase.
+Product Management: Add, edit, and delete products made up of various parts.
+Inventory Tracking: Real-time tracking of parts and product quantities.
+User-Friendly UI: Simple and intuitive HTML-based user interface.
+Reports: Generate reports to track stock levels and product demand.
+Contributing
 
-File: mainscreen.html
-Lines: 197
-Added Buy Now button for products on the mainscreen
-
-File: AddProductController 
-Lines: 177 - 196
-Added buyProduct method to controller. Decrements inventory if inventory is > 0. Indicates whether purchase was completed or not.
-
-Files: PurchaseFailure - Out of Stock page
-File: PurchaseSuccess - Purchase success page
-
-G.  Modify the parts to track maximum and minimum inventory by doing the following:
-•  Add additional fields to the part entity for maximum and minimum inventory.
-•  Modify the sample inventory to include the maximum and minimum fields.
-•  Add to the InhousePartForm and OutsourcedPartForm forms additional text inputs for the inventory so the user can set the maximum and minimum values.
-•  Rename the file the persistent storage is saved to.
-•  Modify the code to enforce that the inventory is between or at the minimum and maximum value.
-
-File: Part.java
-Lines: 33 - 36
-Added Min and max fields to Part class
-
-File: InventoryValidator.java ValidInventory.java
-Created validator class and interface for ensuring part inventory is between min and max values.
-
-File: InHousePartForm.html OutsourcedPartForm.html
-Lines: 33 - 39
-Added function that indicates if there is an error when updating inventory on html pages.
-
-H.  Add validation for between or at the maximum and minimum fields. The validation must include the following:
-•  Display error messages for low inventory when adding and updating parts if the inventory is less than the minimum number of parts.
-•  Display error messages for low inventory when adding and updating products lowers the part inventory below the minimum.
-•  Display error messages when adding and updating parts if the inventory is greater than the maximum.
-
-File: InHousePartForm.html OutsourcedPartForm.html
-Lines: 33 - 39
-Added function that indicates if there is an error when updating inventory on html pages.
-
-Files: EnufPartsValidator.java
-Lines: 37
-Added conditionals to ensure error message is displayed when adding/updating products lowers part inventory below minimum value
-
-I.  Add at least two unit tests for the maximum and minimum fields to the PartTest class in the test package.
-File: PartTest.java
-Lines: 160 - 176
-Added two unit tests for min/max values
-
-J.  Remove the class files for any unused validators in order to clean your code.
-Files: DeletePartValidator
-Deleted unused validator class
-
-K.  Demonstrate professional communication in the content and presentation of your submission.
 
